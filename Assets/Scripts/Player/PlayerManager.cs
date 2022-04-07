@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        coinsText.text = "Coins : " + numberOfCoins;
+        coinsText.text = "Score : " + numberOfCoins;
 
         if (SwipeManager.tap)
         {
