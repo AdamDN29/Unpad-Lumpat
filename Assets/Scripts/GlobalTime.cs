@@ -7,7 +7,7 @@ public class GlobalTime : MonoBehaviour
 {
     public GameObject timeDisplay;
     public GameObject TimeOutText;
-    public int seconds = 30;
+    public static int seconds = 30;
     public bool deductingTime;
 
     // Update is called once per frame
