@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -11,8 +12,10 @@ public class PlayerManager : MonoBehaviour
     public static bool isGameStarted;
     public GameObject StartingText;
 
+    public GameObject MainCanvas;
+
     public static int numberOfCoins;
-    public Text coinsText;
+    public Text scoreText;
 
     void Start()
     {
@@ -27,11 +30,12 @@ public class PlayerManager : MonoBehaviour
     {
         if (gameOver)
         {
+            MainCanvas.SetActive(false);
             gameOverPanel.SetActive(true);
             Time.timeScale = 0;
         }
 
-        coinsText.text = "Score : " + numberOfCoins;
+        scoreText.text = "Score : " + numberOfCoins;
 
         if (SwipeManager.tap)
         {

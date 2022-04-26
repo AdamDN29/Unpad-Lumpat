@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1355752990618999952}
   - component: {fileID: 7241402896627747743}
   m_Layer: 0
-  m_Name: PapanProdi
+  m_Name: PapanProdi1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

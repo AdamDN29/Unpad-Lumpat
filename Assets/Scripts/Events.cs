@@ -5,6 +5,7 @@ public class Events : MonoBehaviour
 {
     public void ReplayGame()
     {
+        GlobalTime.seconds = 10;
         SceneManager.LoadScene("Level");
     }
 

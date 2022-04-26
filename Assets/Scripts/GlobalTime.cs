@@ -7,13 +7,13 @@ public class GlobalTime : MonoBehaviour
 {
     public GameObject timeDisplay;
     public GameObject TimeOutText;
-    public static int seconds = 30;
+    public static int seconds = 10;
     public bool deductingTime;
 
     // Update is called once per frame
     void Update()
     {
-
+        
         if (!PlayerManager.isGameStarted)
         {
             return;
@@ -29,6 +29,7 @@ public class GlobalTime : MonoBehaviour
         }
         else if(seconds == -1)
         {
+            seconds = 10;
             PlayerManager.gameOver = true;
         }
         else
