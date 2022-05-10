@@ -15,8 +15,8 @@ public class MainMenu : MonoBehaviour
     
     void Start()
     {
-        bestScore = PlayerManager.BestScore;
-        bestTime = PlayerManager.BestTime;
+        bestScore = GameOverSystem.BestScore;
+        bestTime = GameOverSystem.BestTime;
 
         var ts = TimeSpan.FromSeconds(bestTime);
 
@@ -26,6 +26,7 @@ public class MainMenu : MonoBehaviour
     
     public void PlayGame()
     {
+        ItemKey.itemKey = 0;
         GlobalTime.seconds = 30;
         GlobalTime.timeRun = 0;
         GlobalTime.timeObject = 0;
