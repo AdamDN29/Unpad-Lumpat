@@ -17,4 +17,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 8d489686eaac9424d992df2bef2c4677
+  - enabled: 1
+    path: Assets/Scenes/Komik1.unity
+    guid: eebd21b6beb3b5641b9c42cb78c1192c
+  - enabled: 1
+    path: Assets/Scenes/Komik2.unity
+    guid: a6b3d0458ec70a44cb3952e1ba5fe196
+  - enabled: 1
+    path: Assets/Scenes/Komik3.unity
+    guid: 8b9dd0cb8ed54864f9c766374e5bec1b
+  - enabled: 1
+    path: Assets/Scenes/Komik4.unity
+    guid: 2a1fa19804baf1e4ea87f73005c06607
+  - enabled: 1
+    path: Assets/Scenes/Komik5.unity
+    guid: 4e3a23929362a42489af9af68758e547
+  - enabled: 1
+    path: Assets/Scenes/Komik6.unity
+    guid: 344df2b66e2e39645bee881d7edb1e32
+  - enabled: 1
+    path: Assets/Scenes/Komik7.unity
+    guid: a085a338aff75e943aaecf6b3f8963fa
+  - enabled: 1
+    path: Assets/Scenes/Komik8.unity
+    guid: 3ad28d95c9d416d4993fce1d2ad49d0d
+  - enabled: 1
+    path: Assets/Scenes/Setting.unity
+    guid: 67df224c3fdb81a46a9cea3a82840b67
   m_configObjects: {}

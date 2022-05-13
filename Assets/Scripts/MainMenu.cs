@@ -9,10 +9,10 @@ public class MainMenu : MonoBehaviour
 {
     public static int bestScore;
     public static int bestTime;
-    
+
     public TextMeshProUGUI Score;
     public TextMeshProUGUI Time;
-    
+
     void Start()
     {
         bestScore = GameOverSystem.BestScore;
@@ -23,14 +23,28 @@ public class MainMenu : MonoBehaviour
         Score.text = "" + bestScore;
         Time.text = string.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
     }
-    
+
     public void PlayGame()
     {
-        ItemKey.itemKey = 0;
-        GlobalTime.seconds = 30;
-        GlobalTime.timeRun = 0;
-        GlobalTime.timeObject = 0;
-        SceneManager.LoadScene("Level");
+        if (Komik.seen == false)
+        {
+            var komik = new Komik();
+            komik.StartKomik("Play");
+        }
+        else
+        {
+            ItemKey.itemKey = 0;
+            GlobalTime.seconds = 30;
+            GlobalTime.timeRun = 0;
+            GlobalTime.timeObject = 0;
+            SceneManager.LoadScene("Level");
+        }
+    }
+
+    public void LihatKomik()
+    {
+        var komik = new Komik();
+        komik.StartKomik("Setting");
     }
 
     public void QuitGame()
