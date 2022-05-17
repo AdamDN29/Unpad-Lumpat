@@ -17,12 +17,16 @@ public class PlayerManager : MonoBehaviour
 
     public Text scoreText;
 
+    private AudioSource coinSound;
+
     void Start()
     {
         gameOver = false;
         Time.timeScale = 1;
         isGameStarted = false;
         numberOfCoins = 0;
+
+        coinSound = GameObject.Find ("coinSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,6 +38,8 @@ public class PlayerManager : MonoBehaviour
         }
 
         scoreText.text = "Score : " + numberOfCoins;
+
+        
 
         if (SwipeManager.tap)
         {

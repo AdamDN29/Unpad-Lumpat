@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public float Gravity = -30;
 
+    public AudioSource deathSound; 
+
     public Animator animator;
     private bool isSliding = false;
 
@@ -142,6 +144,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayerManager.gameOver = true;
         }
+        
     }
 
     private IEnumerator Slide()
