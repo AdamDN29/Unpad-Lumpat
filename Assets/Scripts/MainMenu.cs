@@ -47,6 +47,11 @@ public class MainMenu : MonoBehaviour
         komik.StartKomik("Setting");
     }
 
+    public void HowToPlay()
+    {
+        SceneManager.LoadScene("HowToPlay");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
