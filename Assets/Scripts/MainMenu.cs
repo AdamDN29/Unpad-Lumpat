@@ -11,17 +11,26 @@ public class MainMenu : MonoBehaviour
     public static int bestTime;
 
     public TextMeshProUGUI Score;
-    public TextMeshProUGUI Time;
+    public TextMeshProUGUI Times;
+
+    public Animator animator;
+    public bool onMenu;
 
     void Start()
     {
         bestScore = GameOverSystem.BestScore;
         bestTime = GameOverSystem.BestTime;
 
+        Time.timeScale = 1;
+
+        animator.SetBool("onMenu", true);
+
         var ts = TimeSpan.FromSeconds(bestTime);
 
         Score.text = "" + bestScore;
-        Time.text = string.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
+        Times.text = string.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
+
+       
     }
 
     public void PlayGame()

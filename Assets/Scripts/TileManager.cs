@@ -37,12 +37,12 @@ public class TileManager : MonoBehaviour
 
         if(playerTransform.position.z - 35 > zSpawn - (numberOfTiles * tileLength))
         {
-            if (timeObject == 5)
+            if (timeObject == 4)
             {
                 SpawnTile(Random.Range(6, 7 + 1));
                 timeObject = 0;
             }
-            if (itemKey == 2)
+            if (itemKey == 3)
             {
                 SpawnTile(Random.Range(8, 9 + 1));
                 itemKey = 0;

@@ -39,7 +39,7 @@ public class GameOverSystem : MonoBehaviour
 
         var ts = TimeSpan.FromSeconds(timeRun);
 
-        if (itemKey >= 2)
+        if (itemKey >= 5)
         {
             gameOverScene2.SetActive(true);
         }

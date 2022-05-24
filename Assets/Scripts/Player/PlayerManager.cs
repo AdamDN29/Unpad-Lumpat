@@ -19,12 +19,18 @@ public class PlayerManager : MonoBehaviour
 
     private AudioSource coinSound;
 
+    public static int bestScore;
+
+    public GameObject YouLoseText;
+    public static int flag;
+
     void Start()
     {
         gameOver = false;
         Time.timeScale = 1;
         isGameStarted = false;
         numberOfCoins = 0;
+        flag = 0;
 
         coinSound = GameObject.Find ("coinSound").GetComponent<AudioSource>();
     }
@@ -34,7 +40,26 @@ public class PlayerManager : MonoBehaviour
     {
         if (gameOver)
         {
-            SceneManager.LoadScene("GameOver");
+
+
+                Time.timeScale = 0;
+                YouLoseText.SetActive(true);
+                StartCoroutine(YouLose());
+                
+                bestScore = GameOverSystem.BestScore;
+                if (numberOfCoins > bestScore)
+                {
+                    StartCoroutine(HighS());
+                    
+                }
+                else
+                {
+                     StartCoroutine(GameOverS());
+                }
+
+           
+            
+            
         }
 
         scoreText.text = "Score : " + numberOfCoins;
@@ -46,5 +71,23 @@ public class PlayerManager : MonoBehaviour
             isGameStarted = true;
             Destroy(StartingText);
         }
+    }
+
+    IEnumerator YouLose()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        YouLoseText.SetActive(false);
+    }
+
+    IEnumerator HighS()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        SceneManager.LoadScene("HighScore");
+    }
+
+    IEnumerator GameOverS()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        SceneManager.LoadScene("GameOver");
     }
 }
