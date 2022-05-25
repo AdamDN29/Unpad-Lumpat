@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour
                 YouLoseText.SetActive(true);
                 StartCoroutine(YouLose());
                 
-                bestScore = GameOverSystem.BestScore;
+                bestScore = PlayerPrefs.GetInt("hiScore", 0);
                 if (numberOfCoins > bestScore)
                 {
                     StartCoroutine(HighS());

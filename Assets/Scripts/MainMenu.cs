@@ -18,8 +18,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        bestScore = GameOverSystem.BestScore;
-        bestTime = GameOverSystem.BestTime;
+        bestScore = PlayerPrefs.GetInt("hiScore", 0);
+        bestTime = PlayerPrefs.GetInt("hiTime", 0);
 
         Time.timeScale = 1;
 
@@ -27,6 +27,7 @@ public class MainMenu : MonoBehaviour
 
         var ts = TimeSpan.FromSeconds(bestTime);
 
+       
         Score.text = "" + bestScore;
         Times.text = string.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
 
@@ -42,7 +43,7 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            ItemKey.itemKey = 0;
+            ScoreManager.itemKey = 0;
             GlobalTime.seconds = 30;
             GlobalTime.timeRun = 0;
             GlobalTime.timeObject = 0;

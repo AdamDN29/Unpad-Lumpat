@@ -28,7 +28,7 @@ public class Komik : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Setting");
+            SceneManager.LoadScene("Menu");
         }
     }
 }

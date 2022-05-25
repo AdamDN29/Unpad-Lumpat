@@ -5,7 +5,7 @@ public class Events : MonoBehaviour
 {
     public void ReplayGame()
     {
-        ItemKey.itemKey = 0;
+        ScoreManager.itemKey = 0;
         GlobalTime.seconds = 30;
         GlobalTime.timeRun = 0;
         GlobalTime.timeObject = 0;

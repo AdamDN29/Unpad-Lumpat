@@ -27,7 +27,7 @@ public class GameOverSystem : MonoBehaviour
     {
         timeRun = GlobalTime.timeRun;
         score = PlayerManager.numberOfCoins;
-        itemKey = ItemKey.itemKey;
+        itemKey = ScoreManager.itemKey;
         Debug.Log(itemKey);
 
 
@@ -35,11 +35,15 @@ public class GameOverSystem : MonoBehaviour
         {
             BestScore = score;
             BestTime = timeRun;
+          
+            PlayerPrefs.SetInt("hiScore", BestScore);
+            PlayerPrefs.SetInt("hiTime", BestTime);
+            PlayerPrefs.Save();
         }
 
         var ts = TimeSpan.FromSeconds(timeRun);
 
-        if (itemKey >= 5)
+        if (itemKey >= 2)
         {
             gameOverScene2.SetActive(true);
         }
@@ -53,9 +57,5 @@ public class GameOverSystem : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

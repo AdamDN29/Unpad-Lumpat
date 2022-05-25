@@ -123,10 +123,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5461489456310681273}
   - component: {fileID: 8867415580854328477}
-  - component: {fileID: 2083589429330005503}
   m_Layer: 0
   m_Name: Grad Hat
-  m_TagString: Untagged
+  m_TagString: GradHat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,18 +158,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.911172, y: 1.105949, z: 1.868792}
   m_Center: {x: -0.07416506, y: 0.1589258, z: 0.09535471}
---- !u!114 &2083589429330005503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4647938110548616195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67bc2727265eb204eb2f7c411e0e10f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5663111348954158274
 GameObject:
   m_ObjectHideFlags: 0

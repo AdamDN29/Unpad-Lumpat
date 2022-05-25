@@ -21,7 +21,7 @@ public class Bohlam : MonoBehaviour
         if (other.tag == "Player")
         {
             PlayerManager.numberOfCoins += 1;
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 }

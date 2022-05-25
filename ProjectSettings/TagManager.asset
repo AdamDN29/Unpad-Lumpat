@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Bohlam
+  - CoinA
+  - CoinB
+  - CoinC
+  - GradHat
+  - TimeObject
   layers:
   - Default
   - TransparentFX
