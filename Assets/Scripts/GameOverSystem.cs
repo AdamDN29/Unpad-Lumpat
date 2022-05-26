@@ -28,7 +28,6 @@ public class GameOverSystem : MonoBehaviour
         timeRun = GlobalTime.timeRun;
         score = PlayerManager.numberOfCoins;
         itemKey = ScoreManager.itemKey;
-        Debug.Log(itemKey);
 
 
         if (score > BestScore)

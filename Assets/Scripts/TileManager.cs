@@ -6,7 +6,7 @@ public class TileManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
     public float zSpawn = 0;
-    public float tileLength = 39;
+    public float tileLength = 55;
     public int numberOfTiles = 5;
     private List<GameObject> activeTiles = new List<GameObject>();
 
@@ -14,6 +14,7 @@ public class TileManager : MonoBehaviour
 
     public static int timeObject = 0;
     public static int itemKey = 0;
+    public static int tileCount = 0;
     public static int ftimeObject = 3;
     public static int fitemKey = 5;
 
@@ -22,11 +23,22 @@ public class TileManager : MonoBehaviour
         for (int i = 0; i < numberOfTiles; i++)
         {
             if (i == 0)
+            {
                 SpawnTile(0);
-
-           
+            }
+                
+            else if (i == 1)
+            {
+                SpawnTile(1);
+            }
+                
+            else if (i == 2)
+            {
+                SpawnTile(2);
+            }
+               
             else
-                SpawnTile(Random.Range(1, 5));
+                SpawnTile(Random.Range(7, 16 + 1));
         }
         timeObject = 0;
         itemKey = 0;
@@ -40,41 +52,52 @@ public class TileManager : MonoBehaviour
         {
            
 
-            if (playerTransform.position.z - 35 > zSpawn - (numberOfTiles * tileLength))
+            if (playerTransform.position.z - 45 > zSpawn - (numberOfTiles * tileLength))
             {
                 // Time Object
                 if (timeObject == ftimeObject)
                 {
-                    SpawnTile(Random.Range(6, 7 + 1));
+                    SpawnTile(Random.Range(3, 4 + 1));
                     timeObject = 0;
                     ftimeObject = 99;
                 }
-                else if (timeObject == 6)
+                else if (timeObject == 7)
                 {
-                    SpawnTile(Random.Range(6, 7 + 1));
+                    SpawnTile(Random.Range(3, 4 + 1));
                     timeObject = 0;
                 }
 
                 // Item Key
                 if (itemKey == fitemKey)
                 {
-                    SpawnTile(Random.Range(8, 9 + 1));
+                    SpawnTile(Random.Range(5, 6 + 1));
                     itemKey = 0;
                     fitemKey = 99;
                 }
                 else if (itemKey == 8)
                 {
-                    SpawnTile(Random.Range(8, 9 + 1));
+                    SpawnTile(Random.Range(5, 6 + 1));
                     itemKey = 0;
                 }
 
-
-                else
+                // Normal
+                else if (tileCount <= 12)
                 {
-                    SpawnTile(Random.Range(0, 5 + 1));
+                    SpawnTile(Random.Range(7, 16 + 1));
+                }
+
+                else if (tileCount >= 13)
+                {
+                    SpawnTile(Random.Range(17, 26 + 1));
+                }
+                if (tileCount == 26)
+                {
+                    tileCount = 0;
                 }
                 timeObject += 1;
                 itemKey += 1;
+                tileCount += 1;
+
 
                 DeleteTile();
             }

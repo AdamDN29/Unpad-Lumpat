@@ -5,24 +5,69 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: d351d7bc53ac19041b2cdd0ab4814695, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 3db6463b60ca8bb47889d01738e7fbe7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: c1ea87aa3e2b23f4889bdb8f86fba716, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: 3a9b27b0583915d40af19331a940e589, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: b38105be66b0954499c58caa256e990a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: b409a5c041814224585a418de8c9d001, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: e2c68411142b34b4092b8a2de6aaf77f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: logo-unpad1
+    second: {fileID: 2100000, guid: 15f042302e306f043a6515a7d99eaaf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: main building
+    second: {fileID: 2100000, guid: 0867f6c03a2795a4e9be4ace0c22f0ab, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: GWC Deckchair Canvas_Normal
-    second: {fileID: 2800000, guid: ecadff399279a19468f9029b6bf38641, type: 3}
+    second: {fileID: 2800000, guid: aa5eb0ae8de6d704f95b0a0ce4b90fd4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: logo-unpad1
-    second: {fileID: 2800000, guid: 5e5435c647faf8c41a5c8841af88d4df, type: 3}
+    second: {fileID: 2800000, guid: a428fb125600cc34dbc0792b822c827f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: stripes3
-    second: {fileID: 2800000, guid: 00f8d9b114d581146932580a7fc79936, type: 3}
+    second: {fileID: 2800000, guid: 4ebe7cf3e1a74d24ea718144ba6f60ff, type: 3}
   materials:
     materialImportMode: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -52,7 +97,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
+    useSRGBMaterialColor: 0
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
