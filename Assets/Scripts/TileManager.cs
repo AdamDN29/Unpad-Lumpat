@@ -42,6 +42,7 @@ public class TileManager : MonoBehaviour
         }
         timeObject = 0;
         itemKey = 0;
+        tileCount = 0;
     }
 
     // Update is called once per frame
@@ -61,7 +62,7 @@ public class TileManager : MonoBehaviour
                     timeObject = 0;
                     ftimeObject = 99;
                 }
-                else if (timeObject == 7)
+                else if (timeObject == 6)
                 {
                     SpawnTile(Random.Range(3, 4 + 1));
                     timeObject = 0;
@@ -90,7 +91,7 @@ public class TileManager : MonoBehaviour
                 {
                     SpawnTile(Random.Range(17, 26 + 1));
                 }
-                if (tileCount == 26)
+                if (tileCount == 25)
                 {
                     tileCount = 0;
                 }

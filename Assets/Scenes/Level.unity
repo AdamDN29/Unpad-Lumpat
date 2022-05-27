@@ -2590,7 +2590,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 17807448}
-  jumpForce: 12.5
+  jumpForce: 13
   Gravity: -31
   deathSound: {fileID: 1881536506}
   animator: {fileID: 2086913549}

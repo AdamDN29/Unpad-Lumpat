@@ -10,8 +10,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (other.tag == "Bohlam")
         {
-            PlayerManager.numberOfCoins += 1;
-            
+            PlayerManager.numberOfCoins += 1;    
         }
 
         else if (other.tag == "CoinA")
@@ -36,6 +35,7 @@ public class ScoreManager : MonoBehaviour
 
         else if (other.tag == "GradHat")
         {
+            PlayerManager.numberOfCoins += 25;
             itemKey += 1;
         }
 
