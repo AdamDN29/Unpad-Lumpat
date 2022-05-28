@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public Animator animator;
     public bool onMenu;
+    public int seenComic;
 
     void Start()
     {
@@ -36,7 +37,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        if (Komik.seen == false)
+        seenComic = PlayerPrefs.GetInt("seenComic", 0);
+        if (seenComic == 0)
         {
             var komik = new Komik();
             komik.StartKomik("Play");

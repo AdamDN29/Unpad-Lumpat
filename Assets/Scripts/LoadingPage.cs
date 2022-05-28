@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LoadingPage : MonoBehaviour
 {
-    public static int loadingTime = 0;
+    // public static int loadingTime = 0;
     public static int waitTime = 3;
 
-    
      // Update is called once per frame
     void Update()
     {
@@ -26,7 +25,11 @@ public class LoadingPage : MonoBehaviour
     IEnumerator TickTack()
     {
         yield return new WaitForSeconds(1);
-        waitTime -= 1;
+        waitTime = waitTime - 1;
+    }
 
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

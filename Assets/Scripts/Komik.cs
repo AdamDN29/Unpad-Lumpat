@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Komik : MonoBehaviour
 {
-    public static bool seen = false;
     private static string fromScene;
+
     public void StartKomik(string fromScene)
     {
-        Komik.seen = true;
+        PlayerPrefs.SetInt("seenComic", 1);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("Komik1");
         Komik.fromScene = fromScene;
     }
