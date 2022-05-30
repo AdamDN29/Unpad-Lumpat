@@ -37,6 +37,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        
         seenComic = PlayerPrefs.GetInt("seenComic", 0);
         if (seenComic == 0)
         {

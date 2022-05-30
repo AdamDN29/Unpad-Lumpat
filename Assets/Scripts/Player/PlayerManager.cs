@@ -17,8 +17,6 @@ public class PlayerManager : MonoBehaviour
 
     public Text scoreText;
 
-    private AudioSource coinSound;
-
     public static int bestScore;
 
     public GameObject YouLoseText;
@@ -32,7 +30,6 @@ public class PlayerManager : MonoBehaviour
         numberOfCoins = 0;
         flag = 0;
 
-        coinSound = GameObject.Find ("coinSound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -75,19 +72,19 @@ public class PlayerManager : MonoBehaviour
 
     IEnumerator YouLose()
     {
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(3);
         YouLoseText.SetActive(false);
     }
 
     IEnumerator HighS()
     {
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(5);
         SceneManager.LoadScene("HighScore");
     }
 
     IEnumerator GameOverS()
     {
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(5);
         SceneManager.LoadScene("GameOver");
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class NewBehaviourScript 
+public class Sound 
 {
     public string name;
     public AudioClip clip;

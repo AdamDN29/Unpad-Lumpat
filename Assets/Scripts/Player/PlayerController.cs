@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        FindObjectOfType<AudioManager>().PlaySound("jump");
         direction.y = jumpForce;
     }
 
@@ -143,12 +144,14 @@ public class PlayerController : MonoBehaviour
         if (hit.transform.tag == "Obstacle")
         {
             PlayerManager.gameOver = true;
+            FindObjectOfType<AudioManager>().PlaySound("GameOver");
         }
         
     }
 
     private IEnumerator Slide()
     {
+        FindObjectOfType<AudioManager>().PlaySound("slide");
         isSliding = true;
         animator.SetBool("isSliding", true);
 

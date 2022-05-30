@@ -56,7 +56,8 @@ public class GlobalTime : MonoBehaviour
     }
 
     IEnumerator TimeOut()
-    {       
+    {   
+        FindObjectOfType<AudioManager>().PlaySound("GameOver");    
         yield return new WaitForSeconds(1);
         TimeOutText.SetActive(false);
         seconds = -1;

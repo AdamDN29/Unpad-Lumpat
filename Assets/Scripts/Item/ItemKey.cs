@@ -21,6 +21,7 @@ public class ItemKey : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().PlaySound("item");
             itemKey += 1;
             Debug.Log(itemKey);
             Destroy(gameObject);

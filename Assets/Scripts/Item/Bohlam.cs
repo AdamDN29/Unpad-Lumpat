@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Bohlam : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
+  
     }
+    // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
@@ -20,6 +20,7 @@ public class Bohlam : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().PlaySound("PickUpCoin");
             PlayerManager.numberOfCoins += 1;
             Destroy(other.gameObject);
         }
