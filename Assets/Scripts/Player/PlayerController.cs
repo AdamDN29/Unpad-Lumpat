@@ -137,14 +137,9 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.transform.tag == "Obstacle")
         {
-<<<<<<< Updated upstream
-            FindObjectOfType<AudioManager>().PlaySound("GameOver");
-            PlayerManager.gameOver = true;  
-=======
             PlayerManager.gameOver = true;
             FindObjectOfType<BackgroundMusic>().PlaySound("GameOver");
             FindObjectOfType<BackgroundMusic>().StopSound("MainTheme");
->>>>>>> Stashed changes
         }
         
     }
