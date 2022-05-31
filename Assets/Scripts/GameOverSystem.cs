@@ -56,5 +56,4 @@ public class GameOverSystem : MonoBehaviour
         Time.timeScale = 0;
     }
 
-
 }

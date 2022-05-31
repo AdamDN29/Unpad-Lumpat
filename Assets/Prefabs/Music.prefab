@@ -133,6 +133,13 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - audioType: 0
+    name: happy
+    clip: {fileID: 8300000, guid: b463d49e2751e8f4e9b4e5cd19f8ce76, type: 3}
+    volume: 0.34
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!82 &5946956481530124306
 AudioSource:
   m_ObjectHideFlags: 0
