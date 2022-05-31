@@ -28,16 +28,13 @@ public class MainMenu : MonoBehaviour
 
         var ts = TimeSpan.FromSeconds(bestTime);
 
-       
         Score.text = "" + bestScore;
         Times.text = string.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
-
        
     }
 
     public void PlayGame()
     {
-        
         seenComic = PlayerPrefs.GetInt("seenComic", 0);
         if (seenComic == 0)
         {

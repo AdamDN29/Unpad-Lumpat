@@ -47,12 +47,9 @@ public class TileManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
         if (PlayerManager.isGameStarted == true)
-        {
-           
-
+        {  
             if (playerTransform.position.z - 45 > zSpawn - (numberOfTiles * tileLength))
             {
                 // Time Object
@@ -87,6 +84,7 @@ public class TileManager : MonoBehaviour
                     SpawnTile(Random.Range(7, 16 + 1));
                 }
 
+                // Hard
                 else if (tileCount >= 13)
                 {
                     SpawnTile(Random.Range(17, 26 + 1));
@@ -99,11 +97,8 @@ public class TileManager : MonoBehaviour
                 itemKey += 1;
                 tileCount += 1;
 
-
                 DeleteTile();
             }
-
-
         }
     
     }

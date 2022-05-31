@@ -31,7 +31,8 @@ public class GlobalTime : MonoBehaviour
         }
         else if(seconds == -1)
         {
-            seconds = 60;
+            seconds = 30;
+            FindObjectOfType<AudioManager>().PlaySound("GameOver");
             PlayerManager.gameOver = true;
         }
         else

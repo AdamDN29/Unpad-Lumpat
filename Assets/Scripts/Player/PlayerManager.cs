@@ -20,7 +20,6 @@ public class PlayerManager : MonoBehaviour
     public static int bestScore;
 
     public GameObject YouLoseText;
-    public static int flag;
 
     void Start()
     {
@@ -28,7 +27,6 @@ public class PlayerManager : MonoBehaviour
         Time.timeScale = 1;
         isGameStarted = false;
         numberOfCoins = 0;
-        flag = 0;
 
     }
 
@@ -37,7 +35,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (gameOver)
         {
-
 
                 Time.timeScale = 0;
                 YouLoseText.SetActive(true);
@@ -53,16 +50,10 @@ public class PlayerManager : MonoBehaviour
                 {
                      StartCoroutine(GameOverS());
                 }
-
-           
-            
-            
         }
 
         scoreText.text = "Score : " + numberOfCoins;
-
         
-
         if (SwipeManager.tap)
         {
             isGameStarted = true;

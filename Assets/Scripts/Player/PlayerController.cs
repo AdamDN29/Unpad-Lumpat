@@ -127,12 +127,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-
-
-    }
-
     private void Jump()
     {
         FindObjectOfType<AudioManager>().PlaySound("jump");
@@ -143,8 +137,8 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.transform.tag == "Obstacle")
         {
-            PlayerManager.gameOver = true;
             FindObjectOfType<AudioManager>().PlaySound("GameOver");
+            PlayerManager.gameOver = true;  
         }
         
     }

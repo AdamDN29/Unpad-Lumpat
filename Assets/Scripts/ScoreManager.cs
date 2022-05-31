@@ -35,7 +35,7 @@ public class ScoreManager : MonoBehaviour
         else if (other.tag == "TimeObject")
         {
             FindObjectOfType<AudioManager>().PlaySound("time");
-            GlobalTime.seconds += 15;
+            GlobalTime.seconds += 14;
         }
 
         else if (other.tag == "GradHat")
