@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        FindObjectOfType<AudioManager>().PlaySound("jump");
+        FindObjectOfType<BackgroundMusic>().PlaySound("jump");
         direction.y = jumpForce;
     }
 
@@ -137,15 +137,21 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.transform.tag == "Obstacle")
         {
+<<<<<<< Updated upstream
             FindObjectOfType<AudioManager>().PlaySound("GameOver");
             PlayerManager.gameOver = true;  
+=======
+            PlayerManager.gameOver = true;
+            FindObjectOfType<BackgroundMusic>().PlaySound("GameOver");
+            FindObjectOfType<BackgroundMusic>().StopSound("MainTheme");
+>>>>>>> Stashed changes
         }
         
     }
 
     private IEnumerator Slide()
     {
-        FindObjectOfType<AudioManager>().PlaySound("slide");
+        FindObjectOfType<BackgroundMusic>().PlaySound("slide");
         isSliding = true;
         animator.SetBool("isSliding", true);
 
