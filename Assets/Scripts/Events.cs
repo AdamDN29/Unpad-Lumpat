@@ -5,6 +5,7 @@ public class Events : MonoBehaviour
 {
     public void ReplayGame()
     {
+        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
         ScoreManager.itemKey = 0;
         GlobalTime.seconds = 30;
         GlobalTime.timeRun = 0;
@@ -14,6 +15,7 @@ public class Events : MonoBehaviour
 
     public void MainMenu()
     {
+        FindObjectOfType<BackgroundMusic>().PlaySound("MainTheme");
         SceneManager.LoadScene("Menu");
     }
 
